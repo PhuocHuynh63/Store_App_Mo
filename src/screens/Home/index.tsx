@@ -62,10 +62,11 @@ const HomeScreen = () => {
     const [dataFavorite, setDataFavorite] = useState<IData.Product[]>([])
     useFocusEffect(
         useCallback(() => {
-            async () => {
+            const fetchFavorits = async () => {
                 const favorites = await AsyncStorage.getItem("favorites");
                 if (favorites) setDataFavorite(JSON.parse(favorites));
             };
+            fetchFavorits();
         }, [])
     );
     //#endregion
