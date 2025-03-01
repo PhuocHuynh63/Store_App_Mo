@@ -8,7 +8,7 @@ declare namespace IData {
         image: string;
         brand: string;
         imgBrand: string;
-        limitedTimeDeal: boolean;
+        limitedTimeDeal: number;
         feedbacks: Feedback[];
     }
 
