@@ -9,14 +9,16 @@ import { colors } from "@themes/colors";
 
 const BottomTab = createBottomTabNavigator();
 
-const BottomTabsNavigation = () => {
+const BottomTabsNavigation = ({ route }: any) => {
     return (
-        <BottomTab.Navigator screenOptions={{
-            headerShown: false,
-            tabBarStyle: { backgroundColor: colors.white.bg, borderTopWidth: 0, height: 60 },
-            tabBarActiveTintColor: colors.red.bg,
-            tabBarInactiveTintColor: "#999"
-        }}>
+        <BottomTab.Navigator
+            initialRouteName={route?.param?.screen || ROUTES.HOME}
+            screenOptions={{
+                headerShown: false,
+                tabBarStyle: { backgroundColor: colors.white.bg, borderTopWidth: 0, height: 60 },
+                tabBarActiveTintColor: colors.black.bg,
+                tabBarInactiveTintColor: "#999"
+            }}>
             <BottomTab.Screen
                 name={ROUTES.HOME}
                 component={HomeScreen}

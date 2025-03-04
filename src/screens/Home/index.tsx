@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
         ...StyleShadow.shadow,
     },
     selectedBrand: {
-        backgroundColor: colors.red.bg,
+        backgroundColor: colors.black.bg,
     },
     unselectedBrand: {
         backgroundColor: "white",

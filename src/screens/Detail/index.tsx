@@ -156,7 +156,7 @@ const DetailScreen = () => {
             {/* Header Image with Gradient Overlay */}
             <View className="relative">
                 <View>
-                    <Image source={{ uri: dataProduct.image }} className="h-[400px] w-full object-cover" />
+                    <Image source={{ uri: dataProduct.image || 'https://via.placeholder.com/150' }} className="h-[400px] w-full object-cover" />
                     <TouchableOpacity
                         activeOpacity={0.7}
                         onPress={() => handlePressFavorite(dataProduct.id)}
